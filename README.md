@@ -4,7 +4,9 @@
     <img src="./images/mastermind.jpeg" alt="Playing Mastermind" width=100%>
 </p>
 
-Course material for the Python Crash Course - pt I of Introduction to Data Science and Programming (IDSP) at ITU, fall semester 2025.
+**Welcome!**
+
+This repository contains the course material for the Python Crash Course - pt I of [Introduction to Data Science and Programming (IDSP)](https://learnit.itu.dk/course/view.php?id=3024641) at ITU, fall semester 2025.
 
 ## Course structure
 
