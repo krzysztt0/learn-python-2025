@@ -42,7 +42,7 @@ We will work with jupyter notebooks in this class. The jupyter notebook applicat
 
 ### Step 4b: Open and run a downloaded jupyter notebook
 1. Download the jupyter notebook [`exercise01_testIT.ipynb`](./exercise01_testIT.ipynb) to your machine, to the folder of your choice
-2. Open up the jupyter notebook application with the method of your choice (step 3a)
+2. Open up the jupyter notebook application with the method of your choice (step 4a)
 3. Navigate to the folder where the jupyter notebook is stored, and open the notebook file
 4. Run all cells in the notebook by clicking on `Cell > Run All`
 5. If all worked well, you should receive a friendly greeting in the notebook.
