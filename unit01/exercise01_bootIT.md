@@ -25,10 +25,10 @@ Install an [Anaconda distribution](https://docs.anaconda.com/free/anaconda/insta
 ## Step 4: Launch & use Jupyter notebook
 
 ### Step 4a: Open up the jupyter notebook application - three ways!
-We will work with jupyter notebooks in this class. The jupyter notebook application is part of the Anaconda distrubution you installed in the previous step. There are 2 ways of opening up the jupyter notebook application. Make sure you try out both steps:
-1. Through Anaconda Navigator: open the Anaconda Navigator, search for jupyter notebook, and click `Launch`
-2. Through VS Codium: **todo instructions**
-3. Through the command line interface (CLI): open your CLI, type `jupyter notebook` and press Enter. The notebook should then open in a browser window.
+We will work with jupyter notebooks (`.ipynb`) in this class. The jupyter notebook application is part of the Anaconda distrubution you installed in the previous step. There are 3 ways of opening up the jupyter notebook application. Make sure you try out all three steps:
+1. Through Anaconda Navigator, in your browser: go to the Anaconda Navigator, search for jupyter notebook, and click `Launch`
+2. Through Anaconda Navigator, in VS Codium: go to the Anaconda Navigator, search for VS Codium, and `Launch` (more details [here](https://www.anaconda.com/docs/tools/anaconda-navigator/main); alternatively, you can also launch VS Codium directly and use the file browsing system to open up or create a jupyter notebook)
+3. Through the command line interface (CLI): open your CLI (see below), type `jupyter notebook` and press Enter. The notebook should then open in a browser window.
 
 #### Note: How do I open up the CLI? 
 * macOS & linux users: search for "Terminal" in your Applications
