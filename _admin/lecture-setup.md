@@ -1,4 +1,10 @@
-# lecture setup
+# lecture prep learnIT
+
+- [ ] lecture notebook
+- [ ] exercise notebook
+- [ ] book chapters
+
+# in-class lecture setup
 
 - [x] lecture slides if any
 - [ ] conda idsp25
@@ -7,3 +13,8 @@
 - [ ] share screen
 - [ ] mic (!=blink mute)
 - [ ] timer
+
+# lecture postproc learnIT
+
+- [ ] mindmap update
+- [ ] recording
