@@ -5,6 +5,11 @@
 * mindmap
 * solutions to exercises / in-class lecture stuff
 
+for the blackboard:
+* keywords (for, while, in, assert)
+* data type (range)
+* control flow for loops
+
 
 ##  Where to insert:
 * "is" keyword for typechecking
