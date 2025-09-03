@@ -1,4 +1,12 @@
-Where to insert:
+
+## lec04 remarks
+
+* books
+* mindmap
+* solutions to exercises / in-class lecture stuff
+
+
+##  Where to insert:
 * "is" keyword for typechecking
 * assert statement
 * try/except
