@@ -1,9 +1,9 @@
 
-## lec04 remarks
+## lec05 remarks
 
-* books
 * mindmap
-* solutions to exercises / in-class lecture stuff
+
+***
 
 for the blackboard:
 * keywords (for, while, in, assert)
