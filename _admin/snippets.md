@@ -11,8 +11,8 @@ for the blackboard:
 * data type (None)
 * methods
 * coding stuff: arguments parameters string formatting
-* built-in modules
-* packages
+* built-in modules (math, random, os)
+* packages (pandas, matplotlib)
 
 ##  Where to insert:
 * "is" keyword for typechecking
