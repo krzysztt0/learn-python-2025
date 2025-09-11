@@ -2,7 +2,7 @@
 
 for the course Introduction to Data Science and Programming (Autumn 2025) at ITU
 
-**Due: September 18, 2025, at 23:59** (hand in through [learnIT](https://learnit.itu.dk/course/view.php?id=3024641)!)
+**Due: September 18, 2025, at 23:59** (hand in through [learnIT](https://learnit.itu.dk/course/view.php?id=3024641); hand in one single .py file.)
 
 **TLDR: Write a `.py` script that allows you to play the Mastermind game in your command line interface.**
 
@@ -60,7 +60,7 @@ YOU WON
 
 ## To make the TAs' lives easier
 
-**Make sure to include your info in 2 commented-out lines at the beginning of your.py file:**
+**Make sure to include your info in 2 commented-out lines at the beginning of your .py file:**
 
 ```python
 # NAME = ""
