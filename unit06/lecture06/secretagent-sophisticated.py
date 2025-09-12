@@ -1,5 +1,7 @@
+# import all modules and packages
 import re
 
+# define all functions
 def check_if_1to9(some_string):
     '''
     takes a string as input
@@ -11,6 +13,8 @@ def check_if_1to9(some_string):
     cond3 = re.match(r"\d", some_string) # checks whether an integer character exists in strisome_stringng
     
     return cond1 and cond2 and cond3 # returns True only if all conditions are True; False otherwise
+
+# main body of the code
 
 # ask first two input questions - without type checking
 user_pet = input("What is the name of your first (or future) pet? ")
