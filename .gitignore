@@ -208,7 +208,7 @@ __marimo__/
 
 # Custom
 .DS_Store
-*-old
+*-old*
 *-solved.ipynb
 .ipynb_checkpoints
 
