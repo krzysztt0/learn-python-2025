@@ -1,35 +1,57 @@
 
-## unit06 prep
+## unit07 prep
 
-- [ ] finish lecture 06 (mostly old lecture 07)
-- [ ] finish exercise 06 (mostly old exercise 06 + 07, check menti input)
-- [ ] ASSIGNMENT: mastermind - instructions + help
-
-## lec06 remarks
-
-***
-
-for the blackboard:
-* WINDOWS: Anaconda prompt
-* macOS: terminal
-    * CLI commands
-* file formatting: escape characters
-* software stuff: 
-    GUI / CLI
-    python in CLI
-    running .py
-* JN: "magic"
-
-##  Where to insert:
-* "is" keyword for typechecking
 * try/except
-* sequence comparison: https://docs.python.org/3/tutorial/datastructures.html#comparing-sequences-and-other-types
 * list comprehension
 
-## For assignment 2:
-* functions with more than 1 parameter
-* running .py files
-* built-in modules
-* random module
-* keyword "pass"
-* user input
+## lec07 remarks
+
+...
+* assignment questions?
+
+##  Where to insert:
+* sequence comparison: https://docs.python.org/3/tutorial/datastructures.html#comparing-sequences-and-other-types
+* list comprehension
+* type checking with isinstance()
+* seeding of randomnes
+* try/except
+
+# for lec07 blackboard
+
+built-in modules: csv, json
+
+software & stuff:
+* list comprehension
+* try/except statements (error catching)
+* inline functions (lambda)
+
+keywords:
+* try, except
+
+control flow:
+ try/except
+
+pandas... 
+    attributes: 
+    .index .columns .shape .dtypes
+    dataframe methods:
+    .head() .tail() .keys() .describe()
+    .sort_values()
+    .reset_index()
+    .concat()
+    indexing/slicing methods:
+    .loc, [columname]
+    
+operators:
+    bitwise and, bitwise or
+
+
+## For assignment 3:
+* pandas task
+
+## For lecture 8:
+* filtering out missing values
+* changing values in a cell
+* setting a data type for a series
+* seeding of randomnes
+* type checking with isinstance()
