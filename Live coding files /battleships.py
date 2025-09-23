@@ -21,9 +21,16 @@ p1pieces = p1map.values.sum()
 p2pieces = p2map.values.sum()
 assert(p1pieces == p2pieces)
 
+p1display = pd.DataFrame('?', columns= p2map.column, index = p2)
+
 inputstr = input(f"Captain {p1name} where do you want to shoot? \n")
 column, row = inputstr.split(" ")
 
 row = int(row)
+
+
+if p2map[column][row] == 1:
+    print("HIT!!11 good aim")
+    p1points += 1
 
 print(p2map[row][column])
