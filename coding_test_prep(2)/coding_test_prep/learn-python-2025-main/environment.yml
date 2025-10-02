@@ -1,0 +1,20 @@
+name: idsp25
+channels:
+  - conda-forge
+  - conda
+  - defaults
+dependencies:
+  - python>=3.12
+  - pip
+  - jupyter
+  - jupyterlab
+  - ipykernel
+  - ipywidgets
+  - numpy
+  - pandas
+  - shapely
+  - geopandas 
+  - networkx
+  - contextily
+  - pyyaml
+  - rise
