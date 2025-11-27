@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>questions.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="example-questions-coding-test">Coding training material</h1>
+<p>Suggestion: Work on these questions by yourself in a quiet environment.</p>
+<p>There are three sections: basic concepts, a few more difficult programs, and data analysis. You can expect that the exam will contain tasks from each section (of course with a task that you have not seen before).</p>
+<h1 id="basic-concepts">Basic concepts</h1>
+<h2 id="task-1">Task 1</h2>
+<p>Consider the following code that describes a function that is supposed to work on a list <code>L</code> of integers:</p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">f</span><span class="hljs-params">(L)</span>:</span>
+    n = len(L)
+    i = <span class="hljs-number">0</span>
+    cnt = <span class="hljs-number">0</span>
+
+    <span class="hljs-keyword">while</span> i &lt; n:
+        <span class="hljs-keyword">if</span> L[i] &lt; <span class="hljs-number">0</span>:
+            cnt = cnt + <span class="hljs-number">1</span>
+        i = i + <span class="hljs-number">1</span>
+    <span class="hljs-keyword">return</span> cnt
+</div></code></pre>
+<h2 id="part-1">Part 1</h2>
+<p>Provide a list <code>L</code> such that <code>f(L)</code> returns 3.</p>
+<h2 id="part-2">Part 2</h2>
+<p>Rewrite this code such that the <code>while</code> loop is replaced with a <code>for</code> loop.</p>
+<h2 id="task-2">Task 2</h2>
+<p>Consider the following code that describes a function that is supposed to sum up the elements in a list <code>L</code> of integers (1, 2, ...):</p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sum</span><span class="hljs-params">(L)</span>:</span>
+    res = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> L:
+    res = x
+    <span class="hljs-keyword">return</span> res
+</div></code></pre>
+<p>For example, <code>sum([1, 2, 3])</code> should return 6.</p>
+<h2 id="part-1">Part 1</h2>
+<p>Unfortunately, the code doesn't work correctly. It doesn't even run. Fix the code and make two different calls to the function that demonstrate that the function works as expected.</p>
+<h2 id="part-2">Part 2</h2>
+<p>Rewrite the (corrected) function in the first task so that it uses a <code>while</code> loop instead of a <code>for</code> loop to compute the sum of the list elements.</p>
+<h2 id="task-3">Task 3</h2>
+<p>Gitte is interested in counting the number of <code>12</code> grades that she has received in her studies.
+She wrote a function <code>count</code> that gets a list <code>L</code> of grades and is supposed to return the number of elements that are 12 in the list. She came up with the following solution:</p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">count</span><span class="hljs-params">(L)</span>:</span>
+    result = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> L:
+        <span class="hljs-keyword">if</span> x == <span class="hljs-number">12</span>:
+            result += <span class="hljs-string">"1"</span>
+</div></code></pre>
+<p>For example, <code>count([7, 12, 12, 10, 2, 4, 12])</code> should return 3, and <code>count([12, 12, 10])</code> should return 2.</p>
+<h2 id="part-1">Part 1</h2>
+<p>Unfortunately, her code doesn't work correctly. It doesn't even run. Fix the code and add two function calls that demonstrate that the function works as expected.  There is a <code>TypeError</code> which results in the program not running and Gitte forgot to do something at the end of the function. (So, there are two problems with the code.)</p>
+<p>You are not allowed to change the name of the function.</p>
+<h2 id="part-2">Part 2</h2>
+<p>Rewrite the (corrected) function in the first task so that it uses a <code>while</code> loop instead of a <code>for</code> loop.</p>
+<h2 id="task-4">Task 4</h2>
+<p>Write a function <code>m</code> with the following signature:</p>
+<pre class="hljs"><code><div>def m(x):
+</div></code></pre>
+<p>The function must print the result of multiplying <code>x</code> with each of the numbers 0, ..., 10 (including both) in that order, on separate lines.</p>
+<p>E.g., <code>m(7)</code> must print the following lines:</p>
+<pre class="hljs"><code><div>0
+7
+14
+21
+28
+35
+42
+49
+56
+63
+70
+</div></code></pre>
+<p>You must use a <code>for</code> loop and the <code>range()</code> function.</p>
+<h1 id="a-few-more-difficult-programs">A few more difficult programs</h1>
+<h2 id="task-1">Task 1</h2>
+<p>Every year, Martin has the same problem:
+On the one hand, his introduction to programming class has exercises in a number of different rooms;
+on the other hand, he gets a certain number of TAs that he can hire. Sometimes, there are more rooms than TAs, leaving rooms unstaffed!</p>
+<p>He wants to automate the process of reminding the administration that the number of assigned TAs does not suffice to run the exercise sessions.
+Moreover, if he gets enough TAs, he wants to automatically assign them to rooms.</p>
+<h2 id="part-1">Part 1</h2>
+<p>Write a function <code>check_ta_count</code> that takes two arguments: the number of <code>rooms</code> assigned to the exercise session, and the number of <code>tas</code> that he can hire.
+If <code>tas</code> is at least as large as <code>rooms</code>, then your program should print</p>
+<blockquote>
+<p>Thank you very much for such a generous support.</p>
+</blockquote>
+<p>Otherwise, your program should print</p>
+<blockquote>
+<p>Unfortunately, I need more TAs to run the exercise sessions.</p>
+</blockquote>
+<p>For example, running <code>check_ta_count(11, 11)</code> should print the &quot;Thank you&quot; message, and <code>check_ta_count(6, 2)</code> should print the &quot;Unfortunately, ...&quot; message.</p>
+<p><strong>Note</strong>: You do not have to care about user input, only the function definition is important.</p>
+<h2 id="part-2">Part 2</h2>
+<p>Write a function <code>assign_tas</code> that takes two arguments: the number of <code>rooms</code> and the number of <code>tas</code>. The function prints a suggestion how to assign the TAs to the rooms so that no room is left empty. For example, <code>assign_tas(3, 4)</code> could print:</p>
+<pre class="hljs"><code><div>TA 1 goes to room 1.
+TA 2 goes to room 2.
+TA 3 goes to room 3.
+TA 4 goes to room 3.
+</div></code></pre>
+<p>You can assume that there are enough TAs so that every room can be staffed with at least one. Each TA has to be assigned to exactly one room. <strong>You do not have to provide a solution that balances the number of TAs in each room.</strong></p>
+<h2 id="task-2">Task 2</h2>
+<p>You are to implement the software to run a vending machine that sells the energy drink RØMMARGORP.
+One can is sold for 25 kr, and the customer has to pay with coins with value 1, 2, 5, 10, or 20 kr.</p>
+<p>Your program has to have the following behavior:</p>
+<ol>
+<li>In the beginning, ask how many cans the customer wants to buy.</li>
+<li>Print the amount of money the customer has to pay.</li>
+<li>In a loop, let the user pay with a coin until she paid the whole amount. After each iteration, print the current balance. Print an error if there is no such coin available (without updating the balance).</li>
+<li>Finally, print how much money the customer paid, how much cans she bought, and how much change she gets. Don't print the change if it is 0.</li>
+</ol>
+<p>An example interaction looks like this:</p>
+<pre class="hljs"><code><div>How many cans of RØMMARGORP do you want to buy? 2
+This will cost you 50 kr. 
+Please insert a coin: 20
+You payed 20 kr, you still have to pay 30 kr. 
+Please insert a coin: 20
+You payed 40 kr, you still have to pay 10 kr.
+Please insert a coin: 9
+Sorry, there is no 9 kr coin.
+Please insert a coin: 20
+You payed 60 kr, enjoy your 2 cans of RØMMARGORP. 
+Don't forget your change of 10 kr.
+</div></code></pre>
+<h2 id="task-3">Task 3</h2>
+<p>Write a function <code>next_king(name)</code> that takes the name of a king and <strong>returns</strong> the name of the next king. We simplify the task assuming no female monarchs and no roman numbering system (we use &quot;10&quot; instead of &quot;X&quot;). The rules are as follows:</p>
+<ol>
+<li>After a &quot;Christian&quot; follows a &quot;Frederick&quot; and the other way around.</li>
+<li>The number increases from &quot;Frederick&quot; to &quot;Christian&quot;, but not the other way around.</li>
+</ol>
+<p>For example, <code>next_king(&quot;Christian 7&quot;)</code> returns <code>&quot;Frederick 7&quot;</code>, and <code>next_king(&quot;Frederick 10&quot;)</code> returns <code>&quot;Christian 11&quot;</code>.</p>
+<p>You can get up to half the points for this task if you can implement the function such that the number is not taken into account, that means if <code>next_king(&quot;Christian&quot;)</code> returns <code>&quot;Frederick&quot;</code> and the other way around.</p>
+<h2 id="task-4">Task 4</h2>
+<p>You are in charge of implementing the search function for courses in the new learnIT version at ITU. For the following discussion, assume that we defined a list <code>courses = [&quot;introduction to programming&quot;, &quot;introduction to machine learning&quot;, &quot;advanced statistics&quot;]</code>. You can assume for this task that all strings are in lower-case only.</p>
+<h2 id="part-1">Part 1</h2>
+<p>Write an interactive program that repeatedly asks the user to input a course, which is stored in a variable <code>course</code>.
+If the user does not provide input (by just pressing return/enter), the program should quit. Otherwise, it should either print &quot;This course exists at ITU.&quot; (if the course is present in the list <code>courses</code>) or &quot;No such course exists at ITU.&quot;.</p>
+<p>An example run of your program looks as follows:</p>
+<pre class="hljs"><code><div>Please provide a course: introduction to programming 
+This course exists at ITU.
+Please provide a course: introduction to market economy
+No such course exists at ITU.
+</div></code></pre>
+<h2 id="part-2">Part 2</h2>
+<p>In this task, you will provide an autocompletion feature to your search. Start with the program you developed, and add the following behavior to your program.</p>
+<p>Given the input string <code>course</code> provided by the user, the program prints one of the following four options:</p>
+<ul>
+<li>if the provided string is empty, quit.</li>
+<li>if no element in <code>courses</code> starts with the provided string, print an informative message and quit.</li>
+<li>if there is only a single course in <code>courses</code> that starts with the provided string, the course is printed and the program quits.</li>
+<li>if there are multiple courses that start with the provided string, print each of them and ask the user for input again.</li>
+</ul>
+<p>An example run of your program looks as follows:</p>
+<pre class="hljs"><code><div>Please provide a course: intro
+Multiple courses at ITU start like this:
+introduction to programming 
+introduction to machine learning
+Please provide a course: introduction to p
+The course you mean is introduction to programming
+</div></code></pre>
+<h2 id="task-5">Task 5</h2>
+<p>Sushi, Betty's cat, has a very specific vocabulary to express her needs. Betty knows Sushi very well, stores Sushi's vocabulary and its meanings in a dictionary.</p>
+<p>Now Betty wants to write a function to print the translation of Sushi's sentences.
+Each sentence is composed by a collection of words separated by a blank space.
+If there is a word in the sentence that is not listed in her vocabulary, the function should print the same word, without translation.</p>
+<h2 id="part-1">Part 1</h2>
+<p>Write a function <code>translator_word(dictionary, word)</code> that given a dictionary and one word said by Sushi, prints its meaning.</p>
+<p>For instance, given the following dictionary</p>
+<pre class="hljs"><code><div>sushi_dict = {<span class="hljs-string">'meow'</span>: <span class="hljs-string">'I am hungry!'</span>, 
+    <span class="hljs-string">'meeoow'</span>: <span class="hljs-string">'I am bored!'</span>, <span class="hljs-string">'mmmeow'</span>: <span class="hljs-string">'Nap time.'</span>, 
+    <span class="hljs-string">'meoooow'</span>: <span class="hljs-string">'Pet me!'</span>, <span class="hljs-string">'meooooww'</span>: <span class="hljs-string">'Enough!'</span>, 
+    <span class="hljs-string">'meoooooooww'</span>: <span class="hljs-string">'How dare you human!'</span>}
+</div></code></pre>
+<p><code>translator_word(sushi_dict, 'meow')</code> should print <code>I am hungry!</code> and <code>translator_word(sushi_dict, 'meowowowowow')</code> should print <code>meowowowowow</code>, since this is not a word listed in the dictionary.</p>
+<p>Note that your function should work for any dictionary provided with the word, and not only for the one given as an example.</p>
+<h2 id="part-2">Part 2</h2>
+<p>Write a function <code>translator(dictionary, sentence)</code> that takes a dictionary and a sentence composed of many words separated by blank spaces and prints its meaning.</p>
+<p>For instance, <code>translator(sushi_dict,'mmmeow meoooow')</code> should print <code>Nap time. Pet me!</code>, and <code>translator(sushi_dict,'meoooow prrrr prrrrrrr')</code> should print <code>Pet me! prrrr prrrrrrr</code>.</p>
+<h1 id="data-analysis-tasks">Data analysis tasks</h1>
+<h2 id="task-1">Task 1</h2>
+<p>Rasmus traveled a lot through the last years: the file <code>trips.txt</code> summarizes his 10,000 most recent trips. Of course, given this amount of traveling, he cannot remember every single trip. He has asked you to help him out getting an overview of his travel.</p>
+<h2 id="part-1">Part 1</h2>
+<p>Write a function <code>has_visited</code> that takes three arguments: the <code>filename</code> of the file that contains his trips, a string <code>country</code>, and a string <code>city</code>. Your function has to return <code>True</code> if Rasmus has visited this particular city in this particular country according to the file storing his trips. It has to return <code>False</code> otherwise.</p>
+<h2 id="part-2">Part 2</h2>
+<p>Write a method <code>most_visited</code> that takes a single argument: the <code>filename</code> of the file that contains his trips. The function prints the <strong>country</strong> that Rasmus has visited most frequently.</p>
+<p>As an example, let's assume a file <code>example.txt</code> contains the following lines:</p>
+<pre class="hljs"><code><div>Denmark, Aarhus
+Sweden, Malmo
+Denmark, Aarhus
+Denmark, Skagen
+Denmark, Padborg
+Spain, Madrid
+</div></code></pre>
+<p>According to the specification above, <code>has_visited('example.txt', 'Denmark', 'Aarhus')</code> has to return <code>True</code> and <code>has_visited('example.txt', 'Denmark', 'Copenhagen')</code> has to return <code>False</code>. The function <code>most_visited('example.txt')</code> has to print <code>Denmark</code>, because he has visited Denmark 4 times, and Sweden and Spain only once.</p>
+<h2 id="task-2">Task 2</h2>
+<p>Denmark's train operator DSB is well known for its punctuality. Still, you want to make sure that you are well prepared for your Christmas trip from Copenhagen to Holstebro.</p>
+<p>In the file <code>delays.txt</code> you find a list of train trips from the past. We keep the format simple: each line describes a trip from city A to city B followed by the delay in minutes. For example, the line</p>
+<pre class="hljs"><code><div>Copenhagen Roskilde 3
+</div></code></pre>
+<p>means that the train from Copenhagen to Roskilde had a delay of 3 minutes. You can assume that city names don't include spaces.</p>
+<h2 id="part-1">Part 1</h2>
+<p>Define a function <code>print_trips(filename, start, destination)</code> that prints all lines in <code>filename</code> that start in <code>start</code> and end in <code>destination</code>. At the end, print the average of all the delays.</p>
+<p>To compute the average delay, sum up all the entries and divide by the number of trips. Use integer division <code>//</code> to round down to the nearest integer. If no trip exists from <code>start</code> to <code>destination</code>, print &quot;No trip found.&quot;.</p>
+<h2 id="part-2">Part 2</h2>
+<p>Define a function <code>find_maximum_average_delay(filename)</code> that returns the connection with the maximum average delay among all trips in the file <code>filename</code>.</p>
+
+</body>
+</html>
